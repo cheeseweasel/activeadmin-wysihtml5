@@ -4,6 +4,8 @@ module ActiveAdmin
       class Engine < ::Rails::Engine
         engine_name "activeadmin_wysihtml5"
 
+        require 'bourbon'
+
         initializer "precompile hook", group: :all do |app|
           app.config.assets.precompile += [
             "activeadmin-wysihtml5/base.js",
